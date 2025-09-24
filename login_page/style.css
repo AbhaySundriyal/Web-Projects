@@ -1,0 +1,83 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 800px;
+}
+
+.sidebar {
+  background-color: #483eff;
+  color: white;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px 0;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.step.active {
+  background-color: #bfe2fd;
+  color: black;
+  border-color: transparent;
+}
+
+.step span {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.form-container {
+  padding: 40px;
+  flex: 1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button#nextBtn {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: #02295a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
