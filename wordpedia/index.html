@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dictionary App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📖 Dictionary</h1>
+
+      <div class="controls">
+        <select id="font-select">
+          <option value="serif">Serif</option>
+          <option value="sans-serif">Sans Serif</option>
+          <option value="monospace">Monospace</option>
+        </select>
+
+        <!-- Custom slider switch -->
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for a word..." />
+        <button id="search-btn">🔍</button>
+      </div>
+
+      <div id="result-container"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
