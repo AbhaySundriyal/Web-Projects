@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frontend Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="quiz-box">
+      <div class="header">
+        <h1><span>Welcome to the</span><br><strong>Frontend Quiz!</strong></h1>
+        <p>Pick a subject to get started.</p>
+      </div>
+
+      <!-- Toggle Switch with Icons -->
+      <div class="toggle">
+        <div class="theme-icons">
+          <img src="light.png" alt="Light" class="icon light-icon" />
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+          </label>
+          <img src="dark.png" alt="Dark" class="icon dark-icon" />
+        </div>
+      </div>
+
+      <div class="subjects">
+        <button class="subject"><img src="html-icon.png" alt=""> HTML</button>
+        <button class="subject"><img src="css-icon.png" alt=""> CSS</button>
+        <button class="subject"><img src="js-icon.png" alt=""> JavaScript</button>
+        <button class="subject"><img src="accessibility-icon.png" alt=""> Accessibility</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
