@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entertainment Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">🎬</div>
+      <nav>
+        <ul>
+          <li>🏠</li>
+          <li>🔥</li>
+          <li>📺</li>
+          <li>📌</li>
+        </ul>
+      </nav>
+      <div class="profile">👤</div>
+    </aside>
+    <main class="content">
+      <div class="search">
+        <input type="text" placeholder="Search for movies or TV series" id="searchInput" />
+      </div>
+
+      <section>
+        <h2>Trending</h2>
+        <div class="cards" id="trending">
+          <!-- Trending cards will be rendered here -->
+        </div>
+      </section>
+
+      <section>
+        <h2>Recommended for you</h2>
+        <div class="cards" id="recommended">
+          <!-- Recommended cards will be rendered here -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
