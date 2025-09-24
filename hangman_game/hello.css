@@ -1,0 +1,238 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f06, #48c6ef); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrollbars */
+  }
+  
+  /* Container Styling */
+  .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight opacity for modern look */
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 550px;
+    overflow: hidden;
+    animation: slideUp 1s ease-out;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Canvas Styling */
+  #canvas {
+    border: 2px solid #eee;
+    margin-top: 20px;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+  
+  /* Options Container */
+  #options-container {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #6c5ce7; /* Vibrant purple */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 30px; /* Rounded pill-style button */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #5a3fbb;
+    transform: translateY(-3px); /* Subtle lift effect */
+  }
+  
+  button:active {
+    transform: translateY(1px); /* Pressed effect */
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Letter Container */
+  #letter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .letter {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 12px;
+    padding: 15px 20px;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .letter.correct {
+    background-color: #6c5ce7; /* Vibrant purple for correct guesses */
+    color: white;
+  }
+  
+  .letter.incorrect {
+    background-color: #ff6b6b; /* Red for incorrect guesses */
+    color: white;
+  }
+  
+  .letter:hover {
+    transform: scale(1.1);
+  }
+  
+  /* User Input Section */
+  #user-input-section {
+    margin-top: 30px;
+  }
+  
+  input[type="text"] {
+    width: 50px;
+    font-size: 28px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="text"]:focus {
+    border-color: #6c5ce7; /* Focus color */
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  input[type="text"]:disabled {
+    background-color: #f4f4f4;
+    cursor: not-allowed;
+  }
+  
+  /* New Game Popup */
+  #new-game-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInModal 0.5s ease-out;
+  }
+  
+  @keyframes fadeInModal {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #new-game-container.show {
+    display: flex;
+  }
+  
+  #result-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  #new-game-button {
+    background-color: #48c6ef; /* Light blue */
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  #new-game-button:hover {
+    background-color: #39a6cc;
+    transform: translateY(-3px);
+  }
+  
+  #new-game-button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Hide elements */
+  .hide {
+    display: none;
+  }
+  
+  /* Animation for Letters and Canvas */
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #canvas, #letter-container {
+    animation: bounceIn 0.6s ease-out;
+  }
+  
