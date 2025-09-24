@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planets Fact Site</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>The Planets</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="loadPlanet('mercury')">Mercury</a></li>
+        <li><a href="#" onclick="loadPlanet('venus')">Venus</a></li>
+        <li><a href="#" onclick="loadPlanet('earth')">Earth</a></li>
+        <li><a href="#" onclick="loadPlanet('mars')">Mars</a></li>
+        <li><a href="#" onclick="loadPlanet('jupiter')">Jupiter</a></li>
+        <li><a href="#" onclick="loadPlanet('saturn')">Saturn</a></li>
+        <li><a href="#" onclick="loadPlanet('uranus')">Uranus</a></li>
+        <li><a href="#" onclick="loadPlanet('neptune')">Neptune</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="planet-image">
+      <img id="planetImage" src="" alt="Planet Image">
+    </div>
+
+    <h2 id="planetName"></h2>
+    <p id="planetDescription"></p>
+
+    <div class="facts">
+      <div><strong>Rotation Time:</strong> <span id="rotationTime"></span></div>
+      <div><strong>Revolution Time:</strong> <span id="revolutionTime"></span></div>
+      <div><strong>Radius:</strong> <span id="radius"></span></div>
+      <div><strong>Average Temp:</strong> <span id="averageTemp"></span></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
